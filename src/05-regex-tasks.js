@@ -32,7 +32,7 @@
  * @return {RegExp}
  */
 function getRegexForGuid() {
-  throw new Error('Not implemented');
+  return /\{\p{Hex_Digit}{8}-\p{Hex_Digit}{4}-\p{Hex_Digit}{4}-\p{Hex_Digit}{4}-\p{Hex_Digit}{12}\}/ui;
 }
 
 
@@ -54,7 +54,7 @@ function getRegexForGuid() {
  *
  */
 function getRegexForPitSpot() {
-  throw new Error('Not implemented');
+  return /p.t/;
 }
 
 
@@ -80,6 +80,8 @@ function getRegexForPitSpot() {
  */
 function getPasswordValidator(/* minLength */) {
   throw new Error('Not implemented');
+  // return new RegExp(`(?=[0-9])(?=[a-z])(?=[A-Z])([0-9a-zA-Z]){${minLength},8}$`);
+  // return /(?=^.{6,}$)(?=.*[0-9])(?=.*[A-Z])(?=.*[a-z])(?=.*[^A-Za-z0-9_ ])*/;
 }
 
 
